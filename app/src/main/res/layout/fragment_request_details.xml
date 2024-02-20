@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.RequestDetailsFragment">
+
+    <TextView
+        android:id="@+id/requestDetailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/request_Details_title"
+        android:textColor="#202020"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/grey"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/requestDetailsTitle">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/productImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/round_style"
+                    android:backgroundTint="@color/grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/productTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="@string/item_title"
+                    android:textColor="#202020"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productImageView" />
+
+                <TextView
+                    android:id="@+id/requestOwnerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="@string/request_owner"
+                    android:textColor="#202020"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productTitle" />
+
+                <TextView
+                    android:id="@+id/requestOwner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/request_owner"
+                    android:textColor="#202020"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/requestOwnerTitle" />
+
+                <TextView
+                    android:id="@+id/requestExplanationTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:justificationMode="inter_word"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/request_owner_with_colon"
+                    android:textColor="#202020"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/requestOwner" />
+
+                <TextView
+                    android:id="@+id/requestExplanation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/request_owner_with_colon"
+                    android:textColor="#202020"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/requestExplanationTitle" />
+
+                <TextView
+                android:id="@+id/requestUrgencyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/request_urgency_with_colon"
+                android:textColor="#202020"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/requestExplanation"
+                app:layout_constraintTop_toBottomOf="@id/requestExplanation" />
+
+                <TextView
+                    android:id="@+id/requestUrgencyValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/x_value"
+                    android:textColor="#202020"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/requestUrgencyText" />
+
+                <TextView
+                    android:id="@+id/requestCountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/request_count_with_colon"
+                    android:textColor="#202020"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/requestUrgencyText"
+                    app:layout_constraintTop_toBottomOf="@id/requestUrgencyText" />
+
+                <TextView
+                    android:id="@+id/requestCountValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/x_value"
+                    android:textColor="#202020"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/requestCountText" />
+
+                <TextView
+                    android:id="@+id/productStockCountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/item_count_with_colon"
+                    android:textColor="#202020"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/requestCountText"
+                    app:layout_constraintTop_toBottomOf="@id/requestCountText" />
+
+                <TextView
+                    android:id="@+id/productStockCountValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/x_value"
+                    android:textColor="#202020"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/productStockCountText" />
+
+                <TextView
+                    android:id="@+id/rejectText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/reject"
+                    android:textColor="@color/darkRed"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/productStockCountText"
+                    app:layout_constraintTop_toBottomOf="@id/productStockCountText" />
+
+                <TextView
+                    android:id="@+id/acceptText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/accept"
+                    android:textColor="@color/darkGreen"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/rejectText"/>
+
+                <Button
+                    android:id="@+id/rejectRequestButton"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ic_baseline_clear_24"
+                    android:backgroundTint="@color/darkRed"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/rejectText"
+                    app:layout_constraintStart_toStartOf="@+id/rejectText"
+                    app:layout_constraintTop_toBottomOf="@id/rejectText" />
+
+                <Button
+                    android:id="@+id/acceptRequestButton"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ic_baseline_done_24"
+                    android:backgroundTint="@color/darkGreen"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/acceptText"
+                    app:layout_constraintStart_toStartOf="@+id/acceptText"
+                    app:layout_constraintTop_toTopOf="@+id/rejectRequestButton" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.RequestFormFragment">
+
+    <TextView
+        android:id="@+id/requestFormTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/request_form"
+        android:textColor="#202020"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameSurnameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="35dp"
+        android:text="@string/name_surname"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/requestFormTitle" />
+
+    <TextView
+        android:id="@+id/nameSurnameValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_surname"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/nameSurnameText"
+        app:layout_constraintTop_toBottomOf="@+id/nameSurnameText" />
+
+    <TextView
+        android:id="@+id/requestDetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/request_details"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/nameSurnameValueText"
+        app:layout_constraintTop_toBottomOf="@+id/nameSurnameValueText" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/requestDetailsMultiText"
+        android:layout_width="331dp"
+        android:layout_height="126dp"
+        android:gravity="top"
+        app:layout_constraintStart_toStartOf="@+id/requestDetailsText"
+        app:layout_constraintTop_toBottomOf="@+id/requestDetailsText" />
+
+    <TextView
+        android:id="@+id/requestUrgencyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/request_urgency"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/requestDetailsMultiText"
+        app:layout_constraintTop_toBottomOf="@+id/requestDetailsMultiText" />
+
+    <TextView
+        android:id="@+id/requestUrgencyTipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/request_urgency_tip"
+        android:textStyle="italic"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/requestUrgencyText"
+        app:layout_constraintTop_toBottomOf="@+id/requestUrgencyText" />
+
+    <it.sephiroth.android.library.numberpicker.NumberPicker
+        android:id="@+id/requestUrgencyNumberPicker"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:progress="1"
+        app:layout_constraintBottom_toBottomOf="@+id/requestUrgencyText"
+        app:layout_constraintEnd_toEndOf="@+id/requestDetailsMultiText"
+        app:layout_constraintTop_toTopOf="@+id/requestUrgencyText"
+        app:picker_max="5"
+        app:picker_min="1"
+        app:picker_orientation="horizontal"
+        app:picker_stepSize="1"
+        app:picker_tracker="exponential" />
+
+    <TextView
+        android:id="@+id/requestCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/request_count"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/requestUrgencyTipText"
+        app:layout_constraintTop_toBottomOf="@+id/requestUrgencyTipText" />
+
+    <it.sephiroth.android.library.numberpicker.NumberPicker
+        android:id="@+id/requestCountNumberPicker"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:progress="1"
+        app:layout_constraintBottom_toBottomOf="@+id/requestCountText"
+        app:layout_constraintEnd_toEndOf="@+id/requestDetailsMultiText"
+        app:layout_constraintTop_toTopOf="@+id/requestCountText"
+        app:picker_min="1"
+        app:picker_orientation="horizontal"
+        app:picker_stepSize="1"
+        app:picker_tracker="exponential" />
+
+    <Button
+        android:id="@+id/makeRequestButton"
+        android:layout_width="331dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/round_style"
+        android:backgroundTint="@color/grey"
+        android:text="@string/request_form"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/requestDetailsMultiText"
+        app:layout_constraintStart_toStartOf="@+id/requestDetailsMultiText"
+        app:layout_constraintTop_toBottomOf="@+id/requestCountText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

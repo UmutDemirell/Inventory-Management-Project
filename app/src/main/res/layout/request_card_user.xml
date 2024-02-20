@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="25dp"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginBottom="5dp"
+    android:visibility="gone"
+    app:cardElevation="8dp"
+    android:id="@+id/card_user">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/card_photo"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/card_title"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Title"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/card_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card_id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/request_id"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintStart_toStartOf="@+id/card_state"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/card_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/card_id_text"
+            app:layout_constraintTop_toTopOf="@+id/card_id_text" />
+
+        <TextView
+            android:id="@+id/card_explanation"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/card_title"
+            app:layout_constraintTop_toBottomOf="@+id/card_title" />
+
+        <TextView
+            android:id="@+id/card_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/request_date"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/card_state"
+            app:layout_constraintStart_toStartOf="@+id/card_explanation" />
+
+        <TextView
+            android:id="@+id/card_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/card_state"
+            app:layout_constraintStart_toEndOf="@+id/card_date_text" />
+
+        <TextView
+            android:id="@+id/card_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/request_state"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/card_id_text"
+            app:layout_constraintStart_toStartOf="@+id/card_date_text" />
+
+        <TextView
+            android:id="@+id/card_stateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Kabul Edildi"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/card_state"
+            app:layout_constraintTop_toTopOf="@+id/card_state" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

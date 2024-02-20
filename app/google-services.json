@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "483942013414",
+    "project_id": "inventory-management-pro-a5632",
+    "storage_bucket": "inventory-management-pro-a5632.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483942013414:android:fc141be0a2b839345e1e27",
+        "android_client_info": {
+          "package_name": "com.project.inventorymanagementproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483942013414-iqqhpsb8d57rj30aapcqjvq81doppdm5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkTd8kiWjLTkHthGB5sTsmhLIdLDlYQYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483942013414-iqqhpsb8d57rj30aapcqjvq81doppdm5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

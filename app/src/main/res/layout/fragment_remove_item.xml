@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.RemoveItemFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="125dp">
+
+        <TextView
+            android:id="@+id/removeItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/remove_item"
+            android:textColor="#202020"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/barcodeScannerView"
+            android:layout_width="331dp"
+            android:layout_height="162dp"
+            app:autoFocusButtonColor="@color/white"
+            app:autoFocusButtonVisible="true"
+            app:flashButtonColor="@color/white"
+            app:flashButtonVisible="true"
+            app:layout_constraintStart_toStartOf="@+id/itemBarcodeText"
+            app:layout_constraintTop_toBottomOf="@+id/itemBarcodeText"
+            app:maskColor="@color/grey" />
+
+        <TextView
+            android:id="@+id/itemBarcodeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_barcode"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/removeItemTitle" />
+
+        <TextView
+            android:id="@+id/itemBarcodeValueText"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/default_barcode_value"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/barcodeScannerView"
+            app:layout_constraintTop_toBottomOf="@+id/barcodeScannerView" />
+
+        <TextView
+            android:id="@+id/itemPictureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_photo"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/itemBarcodeValueText"
+            app:layout_constraintTop_toBottomOf="@+id/itemBarcodeValueText" />
+
+        <ImageView
+            android:id="@+id/itemPhotoImageView"
+            android:layout_width="331dp"
+            android:layout_height="162dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_style"
+            android:backgroundTint="@color/grey"
+            app:layout_constraintStart_toStartOf="@+id/itemPictureText"
+            app:layout_constraintTop_toBottomOf="@+id/itemPictureText" />
+
+        <TextView
+            android:id="@+id/itemTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_title"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/itemPhotoImageView"
+            app:layout_constraintTop_toBottomOf="@+id/itemPhotoImageView" />
+
+        <TextView
+            android:id="@+id/itemTitleValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/item_title"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/itemTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/itemTitleText" />
+
+        <TextView
+            android:id="@+id/itemCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_count"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/itemTitleValueText"
+            app:layout_constraintTop_toBottomOf="@+id/itemTitleValueText" />
+
+        <it.sephiroth.android.library.numberpicker.NumberPicker
+            android:id="@+id/itemCountNumberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progress="1"
+            app:picker_min="1"
+            app:picker_orientation="horizontal"
+            app:picker_stepSize="1"
+            app:picker_tracker="exponential"
+            app:layout_constraintBottom_toBottomOf="@+id/itemCountText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/itemCountText"
+            app:layout_constraintTop_toTopOf="@+id/itemCountText" />
+
+        <Button
+            android:id="@+id/removeItemButton"
+            android:layout_width="331dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/round_style"
+            android:backgroundTint="@color/grey"
+            android:text="@string/remove_item"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemCountText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/passwordText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CreateUserFragment">
+
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/create_user_title"
+        android:textColor="#202020"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/firstNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/name"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/profileTitle"
+        app:layout_constraintTop_toBottomOf="@+id/profileTitle" />
+
+    <TextView
+        android:id="@+id/lastNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/surname"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/firstNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameEditText" />
+
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/email"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/lastNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameEditText" />
+
+    <TextView
+        android:id="@+id/departmentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/department"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
+
+    <EditText
+        android:id="@+id/firstNameEditText"
+        android:layout_width="262dp"
+        android:layout_height="42dp"
+        android:singleLine="true"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/firstNameText"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameText" />
+
+    <EditText
+        android:id="@+id/lastNameEditText"
+        android:layout_width="262dp"
+        android:layout_height="42dp"
+        android:singleLine="true"
+        android:ems="10"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/lastNameText"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameText" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="262dp"
+        android:layout_height="42dp"
+        android:singleLine="true"
+        android:ems="10"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/emailText"
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+    <EditText
+        android:id="@+id/departmentEditText"
+        android:layout_width="262dp"
+        android:layout_height="42dp"
+        android:singleLine="true"
+        android:ems="10"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/departmentText"
+        app:layout_constraintTop_toBottomOf="@+id/departmentText" />
+
+    <CheckBox
+        android:id="@+id/adminCheckBox"
+        android:layout_width="102dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/admin"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/departmentEditText"
+        app:layout_constraintTop_toBottomOf="@+id/departmentEditText" />
+
+    <Button
+        android:id="@+id/createUserButton"
+        android:layout_width="262dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/round_style"
+        android:backgroundTint="@color/grey"
+        android:text="@string/create_user_button_text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/profileTitle"
+        app:layout_constraintStart_toStartOf="@+id/adminCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/adminCheckBox" />
+
+    <TextView
+        android:id="@+id/createdPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="#202020"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/adminCheckBox"
+        app:layout_constraintEnd_toEndOf="@+id/departmentEditText"
+        app:layout_constraintTop_toTopOf="@+id/adminCheckBox" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

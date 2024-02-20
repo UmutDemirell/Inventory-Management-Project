@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SearchFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchCardView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="15dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/itemSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/searchCardView"
+            app:queryBackground="@android:color/transparent"
+            android:singleLine="true"
+            app:queryHint="@string/search_item_searchbar_text" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/productTagsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/item_tags"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/searchCardView"
+        app:layout_constraintTop_toBottomOf="@+id/searchCardView" />
+
+    <HorizontalScrollView
+        android:id="@+id/productTagsHorizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/searchCardView"
+        app:layout_constraintStart_toStartOf="@+id/searchCardView"
+        app:layout_constraintTop_toBottomOf="@+id/productTagsTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/checkBoxContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/officeCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/office_item"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/licenseCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/license"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/computerComponentsCheckBox"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/furnitureCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/furniture"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/electronicCheckBox"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/computerComponentsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/computer_part"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/officeCheckBox" />
+
+            <CheckBox
+                android:id="@+id/electronicCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/electronic"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/computerComponentsCheckBox"
+                app:layout_constraintTop_toBottomOf="@+id/officeCheckBox" />
+
+            <CheckBox
+                android:id="@+id/kitchenToolsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/kitchen_tools"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/electronicCheckBox"
+                app:layout_constraintTop_toBottomOf="@+id/officeCheckBox" />
+
+            <CheckBox
+                android:id="@+id/clothingCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/clothing_item"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/computerComponentsCheckBox" />
+
+            <CheckBox
+                android:id="@+id/computerCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/computer"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/computerComponentsCheckBox"
+                app:layout_constraintTop_toBottomOf="@+id/computerComponentsCheckBox" />
+
+            <CheckBox
+                android:id="@+id/decorCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/decore"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/electronicCheckBox"
+                app:layout_constraintTop_toBottomOf="@+id/computerComponentsCheckBox" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="460dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productTagsHorizontalScrollView"
+        app:layout_constraintVertical_bias="0.48" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

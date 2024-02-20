@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.AddItemFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="125dp">
+
+        <TextView
+            android:id="@+id/addItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/add_item"
+            android:textColor="#202020"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/barcodeScannerView"
+            android:layout_width="331dp"
+            android:layout_height="162dp"
+            app:autoFocusButtonColor="@color/white"
+            app:autoFocusButtonVisible="true"
+            app:flashButtonColor="@color/white"
+            app:flashButtonVisible="true"
+            app:layout_constraintStart_toStartOf="@+id/itemBarcodeText"
+            app:layout_constraintTop_toBottomOf="@+id/itemBarcodeText"
+            app:maskColor="@color/grey" />
+
+        <TextView
+            android:id="@+id/itemBarcodeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_barcode"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addItemTitle" />
+
+        <TextView
+            android:id="@+id/itemBarcodeValueText"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/default_barcode_value"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/barcodeScannerView"
+            app:layout_constraintTop_toBottomOf="@+id/barcodeScannerView" />
+
+        <TextView
+            android:id="@+id/itemPictureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_photo"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/itemBarcodeValueText"
+            app:layout_constraintTop_toBottomOf="@+id/itemBarcodeValueText" />
+
+        <ImageView
+            android:id="@+id/itemPhotoImageView"
+            android:layout_width="331dp"
+            android:layout_height="162dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_style"
+            android:backgroundTint="@color/grey"
+            app:layout_constraintStart_toStartOf="@+id/itemPictureText"
+            app:layout_constraintTop_toBottomOf="@+id/itemPictureText" />
+
+        <TextView
+            android:id="@+id/itemTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_title"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/itemPhotoImageView"
+            app:layout_constraintTop_toBottomOf="@+id/itemPhotoImageView" />
+
+        <EditText
+            android:id="@+id/itemTitleEditText"
+            android:layout_width="331dp"
+            android:layout_height="42dp"
+            android:singleLine="true"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/itemTitleText"
+            app:layout_constraintTop_toBottomOf="@+id/itemTitleText" />
+
+        <TextView
+            android:id="@+id/itemExplanationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_explanation"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/itemTitleEditText"
+            app:layout_constraintTop_toBottomOf="@+id/itemTitleEditText" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/itemExplanationMultiText"
+            android:layout_width="331dp"
+            android:layout_height="126dp"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="@+id/itemExplanationText"
+            app:layout_constraintTop_toBottomOf="@+id/itemExplanationText" />
+
+        <TextView
+            android:id="@+id/itemFeaturesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_features"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/itemExplanationMultiText"
+            app:layout_constraintTop_toBottomOf="@+id/itemExplanationMultiText" />
+
+        <MultiAutoCompleteTextView
+            android:id="@+id/itemFeaturesMultiText"
+            android:layout_width="331dp"
+            android:layout_height="126dp"
+            android:gravity="top"
+            app:layout_constraintStart_toStartOf="@+id/itemFeaturesText"
+            app:layout_constraintTop_toBottomOf="@+id/itemFeaturesText" />
+
+        <TextView
+            android:id="@+id/itemCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_count"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/productTagsHorizontalScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/productTagsHorizontalScrollView" />
+
+        <it.sephiroth.android.library.numberpicker.NumberPicker
+            android:id="@+id/itemCountNumberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:picker_max="10000"
+            app:picker_min="1"
+            android:progress="1"
+            app:picker_orientation="horizontal"
+            app:picker_stepSize="1"
+            app:picker_tracker="exponential"
+            app:layout_constraintBottom_toBottomOf="@+id/itemCountText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/itemCountText"
+            app:layout_constraintTop_toTopOf="@+id/itemCountText" />
+
+        <TextView
+            android:id="@+id/itemTagsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/item_tags"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/itemFeaturesMultiText"
+            app:layout_constraintTop_toBottomOf="@+id/itemFeaturesMultiText" />
+
+        <Button
+            android:id="@+id/addItemButton"
+            android:layout_width="331dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/round_style"
+            android:backgroundTint="@color/grey"
+            android:text="@string/add_item"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemCountText" />
+
+        <HorizontalScrollView
+            android:id="@+id/productTagsHorizontalScrollView"
+            android:layout_width="331dp"
+            android:layout_height="126dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/itemFeaturesMultiText"
+            app:layout_constraintStart_toStartOf="@+id/itemTagsText"
+            app:layout_constraintTop_toBottomOf="@+id/itemTagsText">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/checkBoxContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/officeCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/office_item"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/licenseCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/license"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/computerComponentsCheckBox"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/furnitureCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/furniture"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/electronicCheckBox"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/computerComponentsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/computer_part"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/officeCheckBox" />
+
+                <CheckBox
+                    android:id="@+id/electronicCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/electronic"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/computerComponentsCheckBox"
+                    app:layout_constraintTop_toBottomOf="@+id/officeCheckBox" />
+
+                <CheckBox
+                    android:id="@+id/kitchenToolsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/kitchen_tools"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/electronicCheckBox"
+                    app:layout_constraintTop_toBottomOf="@+id/officeCheckBox" />
+
+                <CheckBox
+                    android:id="@+id/clothingCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/clothing_item"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/computerComponentsCheckBox" />
+
+                <CheckBox
+                    android:id="@+id/computerCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/computer"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/computerComponentsCheckBox"
+                    app:layout_constraintTop_toBottomOf="@+id/computerComponentsCheckBox" />
+
+                <CheckBox
+                        android:id="@+id/decorCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/decore"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/electronicCheckBox"
+                    app:layout_constraintTop_toBottomOf="@+id/computerComponentsCheckBox" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

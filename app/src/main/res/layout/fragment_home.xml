@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment">
+
+    <Button
+        android:id="@+id/notifications"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/ic_baseline_notifications_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/welcome"
+        android:textColor="#202020"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/createUserButton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/round_style"
+        android:backgroundTint="@color/grey"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="28dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginEnd="28dp"
+        android:visibility="gone"
+        android:padding="50dp"
+        android:text="@string/create_user"
+        app:layout_constraintStart_toStartOf="@+id/welcomeText"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+
+    <Button
+        android:id="@+id/addItemButton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/round_style"
+        android:backgroundTint="@color/grey"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="28dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginEnd="28dp"
+        android:visibility="gone"
+        android:padding="50dp"
+        android:text="@string/add_item"
+        app:layout_constraintStart_toStartOf="@+id/createUserButton"
+        app:layout_constraintTop_toBottomOf="@+id/createUserButton"/>
+
+    <Button
+        android:id="@+id/removeItemButton"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/round_style"
+        android:backgroundTint="@color/grey"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="28dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginEnd="28dp"
+        android:visibility="gone"
+        android:padding="50dp"
+        android:text="@string/remove_item"
+        app:layout_constraintStart_toStartOf="@+id/addItemButton"
+        app:layout_constraintTop_toBottomOf="@+id/addItemButton" />
+
+    <TextView
+        android:id="@+id/homeRequestText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pending_requests"
+        android:visibility="gone"
+        android:layout_marginTop="70dp"
+        android:textColor="#202020"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/homeRequestCard"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginBottom="90dp"
+        app:cardBackgroundColor="@color/grey"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeRequestText">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/requestHomeRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
